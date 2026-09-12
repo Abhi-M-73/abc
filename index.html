@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mahesh Shah — AC, Fridge &amp; Appliance Repair in Sahajanwa, Gorakhpur</title>
+<meta name="description" content="Mahesh Shah provides trusted AC, refrigerator, cooler, washing machine and home appliance repair service in Sahajanwa, Gorakhpur. Call or WhatsApp 8182001836 for quick local repair assistance." />
+<meta name="keywords" content="AC repair Sahajanwa, fridge repair Gorakhpur, cooler repair, washing machine repair, appliance repair, Dish TV service, Sahajanwa technician" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#1C201D',
+          paper: '#FCFCFB',
+          panel: '#F3F2EE',
+          copper: '#B5642B',
+          coppdark: '#8F4E22',
+          steel: '#3A5A6B',
+        },
+        fontFamily: {
+          display: ['Manrope', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+        },
+      },
+    },
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; }
+  h1, h2, h3, .display { font-family: 'Manrope', sans-serif; }
+
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  .focus-ring:focus-visible {
+    outline: 2px solid #B5642B;
+    outline-offset: 2px;
+  }
+
+  .plug-divider {
+    background-image: repeating-linear-gradient(90deg, #D8D5CC 0 6px, transparent 6px 14px);
+    height: 1px;
+  }
+</style>
+</head>
+<body class="bg-paper text-ink antialiased">
+
+<!-- NAVBAR -->
+<header id="top" class="sticky top-0 z-50 bg-paper/95 backdrop-blur border-b border-black/[0.06]">
+  <nav class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between" aria-label="Primary">
+    <a href="#top" class="flex items-center gap-2.5 focus-ring rounded">
+      <span class="w-9 h-9 rounded-lg bg-ink flex items-center justify-center shrink-0" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FCFCFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0-1.4 0L6.3 13.3a1 1 0 0 0 0 1.4l3 3a1 1 0 0 0 1.4 0l7-7a1 1 0 0 0 0-1.4l-3-3Z"/><path d="m8 16-1.5 5.5L2 23l1.5-4.5L8 16Z"/><path d="m14 6 2 2"/><path d="m17 3 2 2"/></svg>
+      </span>
+      <span class="display font-extrabold text-lg tracking-tight">Mahesh Shah</span>
+    </a>
+
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-ink/70">
+      <a href="#home" class="hover:text-ink transition-colors focus-ring rounded">Home</a>
+      <a href="#services" class="hover:text-ink transition-colors focus-ring rounded">Services</a>
+      <a href="#why-us" class="hover:text-ink transition-colors focus-ring rounded">Why Us</a>
+      <a href="#about" class="hover:text-ink transition-colors focus-ring rounded">About</a>
+      <a href="#contact" class="hover:text-ink transition-colors focus-ring rounded">Contact</a>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <a href="tel:+918182001836" class="hidden sm:inline-flex items-center gap-2 bg-copper hover:bg-coppdark text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors focus-ring">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call Now
+      </a>
+      <button id="menuBtn" class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg border border-black/10 focus-ring" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg id="menuIconOpen" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        <svg id="menuIconClose" class="hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t border-black/[0.06] bg-paper">
+    <div class="px-5 py-4 flex flex-col gap-1 text-sm font-medium">
+      <a href="#home" class="py-2.5 px-2 rounded hover:bg-panel">Home</a>
+      <a href="#services" class="py-2.5 px-2 rounded hover:bg-panel">Services</a>
+      <a href="#why-us" class="py-2.5 px-2 rounded hover:bg-panel">Why Us</a>
+      <a href="#about" class="py-2.5 px-2 rounded hover:bg-panel">About</a>
+      <a href="#contact" class="py-2.5 px-2 rounded hover:bg-panel">Contact</a>
+      <a href="tel:+918182001836" class="mt-2 inline-flex items-center justify-center gap-2 bg-copper text-white font-semibold px-4 py-2.5 rounded-lg">Call Now</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 pt-14 pb-16 md:pt-20 md:pb-24 grid md:grid-cols-2 gap-10 md:gap-8 items-center">
+    <div class="reveal">
+      <p class="text-copper font-semibold text-sm tracking-wide mb-4">Sahajanwa, Gorakhpur · Home Appliance Repair</p>
+      <h1 class="display font-extrabold text-[2.35rem] leading-[1.12] sm:text-5xl sm:leading-[1.1] tracking-tight text-ink">
+        Reliable appliance repair, right here in Sahajanwa
+      </h1>
+      <p class="mt-5 text-ink/70 text-base sm:text-lg leading-relaxed max-w-md">
+        Mahesh Shah repairs AC units, refrigerators, coolers and washing machines for homes across Sahajanwa and Gorakhpur — straightforward service, fixed at your doorstep.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="tel:+918182001836" class="inline-flex items-center gap-2 bg-ink text-white font-semibold px-6 py-3.5 rounded-lg hover:bg-black transition-colors focus-ring">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Now
+        </a>
+        <a href="https://wa.me/918182001836?text=Hello%20Mahesh%20ji%2C%20I%20need%20help%20with%20appliance%20repair%2Fservice.%20Please%20let%20me%20know%20the%20details." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white border border-black/15 text-ink font-semibold px-6 py-3.5 rounded-lg hover:bg-panel transition-colors focus-ring">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+
+      <p class="mt-5 text-sm text-ink/60">Call or WhatsApp directly at <a href="tel:+918182001836" class="font-semibold text-ink underline underline-offset-2">8182001836</a></p>
+
+      <div class="mt-9 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-lg">
+        <div class="flex items-center gap-2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="shrink-0"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="text-sm text-ink/75">Local Service</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="shrink-0"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          <span class="text-sm text-ink/75">Experienced Technician</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="shrink-0"><path d="M3 9.5 12 3l9 6.5"/><path d="M5 10v10h14V10"/></svg>
+          <span class="text-sm text-ink/75">Home Service</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="shrink-0"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span class="text-sm text-ink/75">Quick Response</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="relative rounded-2xl overflow-hidden shadow-lg shadow-black/[0.08] aspect-[4/5] sm:aspect-[5/4] md:aspect-[4/5]">
+        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop"
+             alt="Technician repairing a split air conditioner unit"
+             class="w-full h-full object-cover" loading="eager" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="plug-divider max-w-6xl mx-auto"></div>
+
+<!-- SERVICES -->
+<section id="services" class="py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-xl reveal">
+      <h2 class="display font-extrabold text-3xl sm:text-4xl tracking-tight">Our Repair Services</h2>
+      <p class="mt-3 text-ink/65 leading-relaxed">Practical repair and service work for the appliances that keep your home running, handled directly by Mahesh Shah.</p>
+    </div>
+
+    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <div class="reveal group p-6 rounded-xl border border-black/[0.08] bg-white hover:border-copper/40 hover:shadow-md hover:shadow-black/[0.04] transition-all">
+        <div class="w-11 h-11 rounded-lg bg-panel flex items-center justify-center mb-4 group-hover:bg-copper/10 transition-colors">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0v3a4 4 0 0 0 4 4H2a4 4 0 0 0 4-4V8Z"/><path d="M9 20a3 3 0 0 0 6 0"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg">AC Repair &amp; Service</h3>
+        <p class="mt-2 text-sm text-ink/65 leading-relaxed">Cooling issues, gas top-up, servicing and general split &amp; window AC repair at your home.</p>
+      </div>
+
+      <div class="reveal group p-6 rounded-xl border border-black/[0.08] bg-white hover:border-copper/40 hover:shadow-md hover:shadow-black/[0.04] transition-all">
+        <div class="w-11 h-11 rounded-lg bg-panel flex items-center justify-center mb-4 group-hover:bg-copper/10 transition-colors">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="5" y1="12" x2="19" y2="12"/><line x1="9" y1="6" x2="9" y2="6"/><line x1="9" y1="16" x2="9" y2="16"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg">Refrigerator Repair</h3>
+        <p class="mt-2 text-sm text-ink/65 leading-relaxed">Fridge not cooling, unusual noise or door and gasket problems — diagnosed and repaired on site.</p>
+      </div>
+
+      <div class="reveal group p-6 rounded-xl border border-black/[0.08] bg-white hover:border-copper/40 hover:shadow-md hover:shadow-black/[0.04] transition-all">
+        <div class="w-11 h-11 rounded-lg bg-panel flex items-center justify-center mb-4 group-hover:bg-copper/10 transition-colors">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v6"/><path d="M5 10h14l-1.5 10a2 2 0 0 1-2 1.8H8.5a2 2 0 0 1-2-1.8L5 10Z"/><path d="M9 3h6"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg">Cooler Repair</h3>
+        <p class="mt-2 text-sm text-ink/65 leading-relaxed">Motor, pump, and cooling pad issues fixed so your air cooler runs smoothly through summer.</p>
+      </div>
+
+      <div class="reveal group p-6 rounded-xl border border-black/[0.08] bg-white hover:border-copper/40 hover:shadow-md hover:shadow-black/[0.04] transition-all">
+        <div class="w-11 h-11 rounded-lg bg-panel flex items-center justify-center mb-4 group-hover:bg-copper/10 transition-colors">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg">Washing Machine Repair</h3>
+        <p class="mt-2 text-sm text-ink/65 leading-relaxed">Spin, drainage, motor and control issues repaired for both top-load and front-load machines.</p>
+      </div>
+
+      <div class="reveal group p-6 rounded-xl border border-black/[0.08] bg-white hover:border-copper/40 hover:shadow-md hover:shadow-black/[0.04] transition-all">
+        <div class="w-11 h-11 rounded-lg bg-panel flex items-center justify-center mb-4 group-hover:bg-copper/10 transition-colors">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a9 9 0 0 1 20 0"/><path d="M6 9a5 5 0 0 1 12 0"/><line x1="12" y1="9" x2="12" y2="20"/><path d="M9 20h6"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg">Home Appliance Repair</h3>
+        <p class="mt-2 text-sm text-ink/65 leading-relaxed">General electrical and electronic home appliance repair beyond the categories above — just ask.</p>
+      </div>
+
+      <div class="reveal group p-6 rounded-xl border border-black/[0.08] bg-white hover:border-copper/40 hover:shadow-md hover:shadow-black/[0.04] transition-all">
+        <div class="w-11 h-11 rounded-lg bg-panel flex items-center justify-center mb-4 group-hover:bg-copper/10 transition-colors">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M17 2 12 7 7 2"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg">Dish TV Service</h3>
+        <p class="mt-2 text-sm text-ink/65 leading-relaxed">Signal, connection and dish alignment issues sorted alongside your other appliance repairs.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED IMAGE SECTION -->
+<section class="py-16 md:py-24 bg-panel">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+    <div class="reveal order-2 md:order-1">
+      <p class="text-copper font-semibold text-sm tracking-wide mb-3">Hands-on repair, done right</p>
+      <h2 class="display font-extrabold text-3xl sm:text-4xl tracking-tight leading-tight">Practical fixes, explained in plain language</h2>
+      <p class="mt-4 text-ink/70 leading-relaxed max-w-md">
+        Every repair starts with a proper look at the actual problem. Mahesh Shah works directly on your appliance at home, explains what's wrong, and gets it running again — no unnecessary parts, no confusing jargon.
+      </p>
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a href="tel:+918182001836" class="inline-flex items-center gap-2 bg-ink text-white font-semibold px-5 py-3 rounded-lg hover:bg-black transition-colors focus-ring text-sm">
+          Call Now
+        </a>
+        <a href="https://wa.me/918182001836?text=Hello%20Mahesh%20ji%2C%20I%20need%20help%20with%20appliance%20repair%2Fservice.%20Please%20let%20me%20know%20the%20details." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white border border-black/15 text-ink font-semibold px-5 py-3 rounded-lg hover:bg-panel transition-colors focus-ring text-sm">
+          WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="reveal order-1 md:order-2">
+      <div class="rounded-2xl overflow-hidden shadow-lg shadow-black/[0.08] aspect-[4/3]">
+        <img src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?q=80&w=1200&auto=format&fit=crop"
+             alt="Technician servicing a washing machine in a home"
+             class="w-full h-full object-cover" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why-us" class="py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-xl reveal">
+      <h2 class="display font-extrabold text-3xl sm:text-4xl tracking-tight">Why Choose Mahesh Shah</h2>
+    </div>
+
+    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="reveal">
+        <div class="flex items-start gap-3">
+          <div class="w-9 h-9 rounded-lg bg-copper/10 flex items-center justify-center shrink-0 mt-0.5">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold">Experienced Repair Work</h3>
+            <p class="mt-1.5 text-sm text-ink/65 leading-relaxed">Hands-on repair experience across AC, refrigerator, cooler and washing machine appliances.</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="flex items-start gap-3">
+          <div class="w-9 h-9 rounded-lg bg-copper/10 flex items-center justify-center shrink-0 mt-0.5">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold">Multiple Appliance Services</h3>
+            <p class="mt-1.5 text-sm text-ink/65 leading-relaxed">One technician for most of your home appliance repair needs, including Dish TV work.</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="flex items-start gap-3">
+          <div class="w-9 h-9 rounded-lg bg-copper/10 flex items-center justify-center shrink-0 mt-0.5">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold">Local Sahajanwa Service</h3>
+            <p class="mt-1.5 text-sm text-ink/65 leading-relaxed">Based in Sahajanwa, Gorakhpur, and familiar with the area's homes and needs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="flex items-start gap-3">
+          <div class="w-9 h-9 rounded-lg bg-copper/10 flex items-center justify-center shrink-0 mt-0.5">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold">Direct Contact</h3>
+            <p class="mt-1.5 text-sm text-ink/65 leading-relaxed">Speak with Mahesh Shah directly by call or WhatsApp — no call centre in between.</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="flex items-start gap-3">
+          <div class="w-9 h-9 rounded-lg bg-copper/10 flex items-center justify-center shrink-0 mt-0.5">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5"/><path d="M5 10v10h14V10"/></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold">Convenient Home Service</h3>
+            <p class="mt-1.5 text-sm text-ink/65 leading-relaxed">Repairs are carried out at your home, so appliances don't need to be moved elsewhere.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-16 md:py-24 bg-panel">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid md:grid-cols-5 gap-10 items-center">
+    <div class="md:col-span-2 reveal">
+      <div class="rounded-2xl overflow-hidden shadow-lg shadow-black/[0.08] aspect-square">
+        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1000&auto=format&fit=crop"
+             alt="Electronics repair technician working with tools"
+             class="w-full h-full object-cover" loading="lazy" />
+      </div>
+    </div>
+    <div class="md:col-span-3 reveal">
+      <h2 class="display font-extrabold text-3xl sm:text-4xl tracking-tight">About Mahesh Shah</h2>
+      <p class="mt-4 text-ink/70 leading-relaxed">
+        Mahesh Shah provides local repair services for home appliances and electrical/electronic equipment in Sahajanwa, Gorakhpur. His work covers AC, refrigerator, cooler and washing machine repair, along with Dish TV related service.
+      </p>
+      <p class="mt-4 text-ink/70 leading-relaxed">
+        Customers can reach out directly by phone or WhatsApp to describe the issue and arrange a home visit — straightforward repair service without any middlemen.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-xl reveal">
+      <h2 class="display font-extrabold text-3xl sm:text-4xl tracking-tight">How It Works</h2>
+    </div>
+
+    <div class="mt-10 grid sm:grid-cols-3 gap-6">
+      <div class="reveal relative pl-14 sm:pl-0 sm:pt-14">
+        <span class="absolute left-0 top-0 sm:top-0 sm:left-0 w-10 h-10 rounded-full bg-ink text-white flex items-center justify-center font-semibold display">1</span>
+        <h3 class="font-semibold text-lg">Call or WhatsApp</h3>
+        <p class="mt-2 text-sm text-ink/65 leading-relaxed">Reach out on 8182001836 by phone call or WhatsApp message.</p>
+      </div>
+      <div class="reveal relative pl-14 sm:pl-0 sm:pt-14">
+        <span class="absolute left-0 top-0 sm:top-0 sm:left-0 w-10 h-10 rounded-full bg-ink text-white flex items-center justify-center font-semibold display">2</span>
+        <h3 class="font-semibold text-lg">Describe Your Problem</h3>
+        <p class="mt-2 text-sm text-ink/65 leading-relaxed">Explain what's wrong with your AC, fridge, cooler, washing machine or other appliance.</p>
+      </div>
+      <div class="reveal relative pl-14 sm:pl-0 sm:pt-14">
+        <span class="absolute left-0 top-0 sm:top-0 sm:left-0 w-10 h-10 rounded-full bg-ink text-white flex items-center justify-center font-semibold display">3</span>
+        <h3 class="font-semibold text-lg">Get Repair Assistance</h3>
+        <p class="mt-2 text-sm text-ink/65 leading-relaxed">Mahesh Shah visits your home in Sahajanwa/Gorakhpur to diagnose and repair the issue.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / FINAL CTA -->
+<section id="contact" class="py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="reveal rounded-2xl bg-ink text-white px-6 py-12 sm:px-14 sm:py-16 text-center">
+      <h2 class="display font-extrabold text-3xl sm:text-4xl tracking-tight">Need Appliance Repair?</h2>
+      <p class="mt-4 text-white/70 max-w-lg mx-auto leading-relaxed">
+        Contact Mahesh Shah directly for repair and service assistance in Sahajanwa and nearby areas.
+      </p>
+      <p class="mt-6 text-2xl font-semibold tracking-wide">8182001836</p>
+
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="tel:+918182001836" class="inline-flex items-center gap-2 bg-copper hover:bg-coppdark text-white font-semibold px-6 py-3.5 rounded-lg transition-colors focus-ring">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Now
+        </a>
+        <a href="https://wa.me/918182001836?text=Hello%20Mahesh%20ji%2C%20I%20need%20help%20with%20appliance%20repair%2Fservice.%20Please%20let%20me%20know%20the%20details." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-ink font-semibold px-6 py-3.5 rounded-lg hover:bg-white/90 transition-colors focus-ring">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          WhatsApp Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-black/[0.06] pb-24 md:pb-10 pt-10">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row justify-between gap-8">
+    <div>
+      <span class="display font-extrabold text-lg">Mahesh Shah</span>
+      <p class="mt-2 text-sm text-ink/60 leading-relaxed">Sahajanwa, Gorakhpur,<br/>Uttar Pradesh</p>
+      <p class="mt-2 text-sm text-ink/60">Phone: <a href="tel:+918182001836" class="text-ink font-medium hover:underline">8182001836</a></p>
+    </div>
+    <div class="flex flex-col gap-2 text-sm">
+      <span class="font-semibold text-ink/80 mb-1">Quick Links</span>
+      <a href="#home" class="text-ink/60 hover:text-ink transition-colors">Home</a>
+      <a href="#services" class="text-ink/60 hover:text-ink transition-colors">Services</a>
+      <a href="#about" class="text-ink/60 hover:text-ink transition-colors">About</a>
+      <a href="#contact" class="text-ink/60 hover:text-ink transition-colors">Contact</a>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 mt-10 pt-6 border-t border-black/[0.06] text-xs text-ink/45">
+    © 2026 Mahesh Shah. All rights reserved.
+  </div>
+</footer>
+
+<!-- MOBILE FIXED ACTION BAR -->
+<div class="fixed bottom-0 inset-x-0 z-50 md:hidden bg-white/95 backdrop-blur border-t border-black/[0.08] px-4 py-3 flex gap-3">
+  <a href="tel:+918182001836" class="flex-1 inline-flex items-center justify-center gap-2 bg-ink text-white font-semibold py-3 rounded-lg text-sm focus-ring">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Call
+  </a>
+  <a href="https://wa.me/918182001836?text=Hello%20Mahesh%20ji%2C%20I%20need%20help%20with%20appliance%20repair%2Fservice.%20Please%20let%20me%20know%20the%20details." target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-2 bg-copper text-white font-semibold py-3 rounded-lg text-sm focus-ring">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<script>
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const iconOpen = document.getElementById('menuIconOpen');
+  const iconClose = document.getElementById('menuIconClose');
+
+  menuBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden');
+    iconOpen.classList.toggle('hidden');
+    iconClose.classList.toggle('hidden');
+    menuBtn.setAttribute('aria-expanded', String(!isOpen));
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
