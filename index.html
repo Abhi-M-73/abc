@@ -53,6 +53,36 @@
     background-image: repeating-linear-gradient(90deg, #D8D5CC 0 6px, transparent 6px 14px);
     height: 1px;
   }
+
+  /* Interaction animations */
+  .btn-press { transition: transform .15s ease, box-shadow .2s ease, background-color .2s ease; }
+  .btn-press:hover { transform: translateY(-2px); box-shadow: 0 8px 20px -8px rgba(0,0,0,0.25); }
+  .btn-press:active { transform: translateY(0) scale(0.97); box-shadow: none; }
+
+  .img-zoom { overflow: hidden; border-radius: 1rem; }
+  .img-zoom img { transition: transform .6s cubic-bezier(.22,.61,.36,1); }
+  .img-zoom:hover img { transform: scale(1.06); }
+
+  .card-lift { transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+  .card-lift:hover { transform: translateY(-6px); }
+
+  .icon-pop { transition: transform .3s cubic-bezier(.34,1.56,.64,1), background-color .3s ease; }
+  .card-lift:hover .icon-pop { transform: scale(1.12) rotate(-6deg); }
+
+  .link-underline { position: relative; }
+  .link-underline::after {
+    content: ""; position: absolute; left: 0; bottom: -4px; height: 2px; width: 0;
+    background: #B5642B; transition: width .25s ease;
+  }
+  .link-underline:hover::after { width: 100%; }
+
+  .badge-tap { transition: transform .2s ease; }
+  .badge-tap:hover { transform: translateY(-2px); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .btn-press, .img-zoom img, .card-lift, .icon-pop, .link-underline::after, .badge-tap { transition: none !important; }
+    .btn-press:hover, .card-lift:hover, .badge-tap:hover { transform: none !important; }
+  }
 </style>
 </head>
 <body class="bg-paper text-ink antialiased">
@@ -68,15 +98,15 @@
     </a>
 
     <div class="hidden md:flex items-center gap-8 text-sm font-medium text-ink/70">
-      <a href="#home" class="hover:text-ink transition-colors focus-ring rounded">Home</a>
-      <a href="#services" class="hover:text-ink transition-colors focus-ring rounded">Services</a>
-      <a href="#why-us" class="hover:text-ink transition-colors focus-ring rounded">Why Us</a>
-      <a href="#about" class="hover:text-ink transition-colors focus-ring rounded">About</a>
-      <a href="#contact" class="hover:text-ink transition-colors focus-ring rounded">Contact</a>
+      <a href="#home" class="link-underline hover:text-ink transition-colors focus-ring rounded">Home</a>
+      <a href="#services" class="link-underline hover:text-ink transition-colors focus-ring rounded">Services</a>
+      <a href="#why-us" class="link-underline hover:text-ink transition-colors focus-ring rounded">Why Us</a>
+      <a href="#about" class="link-underline hover:text-ink transition-colors focus-ring rounded">About</a>
+      <a href="#contact" class="link-underline hover:text-ink transition-colors focus-ring rounded">Contact</a>
     </div>
 
     <div class="flex items-center gap-3">
-      <a href="tel:+918182001836" class="hidden sm:inline-flex items-center gap-2 bg-copper hover:bg-coppdark text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors focus-ring">
+      <a href="tel:+918182001836" class="btn-press hidden sm:inline-flex items-center gap-2 bg-copper hover:bg-coppdark text-white text-sm font-semibold px-4 py-2.5 rounded-lg focus-ring">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         Call Now
       </a>
@@ -112,17 +142,22 @@
       </p>
 
       <div class="mt-8 flex flex-wrap gap-3">
-        <a href="tel:+918182001836" class="inline-flex items-center gap-2 bg-ink text-white font-semibold px-6 py-3.5 rounded-lg hover:bg-black transition-colors focus-ring">
+        <a href="tel:+918182001836" class="btn-press inline-flex items-center gap-2 bg-ink text-white font-semibold px-6 py-3.5 rounded-lg hover:bg-black focus-ring">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           Call Now
         </a>
-        <a href="https://wa.me/918182001836?text=Hello%20Mahesh%20ji%2C%20I%20need%20help%20with%20appliance%20repair%2Fservice.%20Please%20let%20me%20know%20the%20details." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white border border-black/15 text-ink font-semibold px-6 py-3.5 rounded-lg hover:bg-panel transition-colors focus-ring">
+        <a href="https://wa.me/918182001836?text=Hello%20Mahesh%20ji%2C%20I%20need%20help%20with%20appliance%20repair%2Fservice.%20Please%20let%20me%20know%20the%20details." target="_blank" rel="noopener noreferrer" class="btn-press inline-flex items-center gap-2 bg-white border border-black/15 text-ink font-semibold px-6 py-3.5 rounded-lg hover:bg-panel focus-ring">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
           WhatsApp
         </a>
       </div>
 
       <p class="mt-5 text-sm text-ink/60">Call or WhatsApp directly at <a href="tel:+918182001836" class="font-semibold text-ink underline underline-offset-2">8182001836</a></p>
+
+      <div class="badge-tap mt-4 inline-flex items-center gap-2 bg-copper/10 border border-copper/20 rounded-full px-4 py-2">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="shrink-0"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <span class="text-sm font-semibold text-coppdark">₹300 Fixed Visiting Charge · Home Service</span>
+      </div>
 
       <div class="mt-9 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-lg">
         <div class="flex items-center gap-2">
@@ -145,10 +180,12 @@
     </div>
 
     <div class="reveal">
-      <div class="relative rounded-2xl overflow-hidden shadow-lg shadow-black/[0.08] aspect-[4/5] sm:aspect-[5/4] md:aspect-[4/5]">
-        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop"
-             alt="Technician repairing a split air conditioner unit"
-             class="w-full h-full object-cover" loading="eager" />
+      <div class="img-zoom relative rounded-2xl shadow-lg shadow-black/[0.08] aspect-[4/5] sm:aspect-[5/4] md:aspect-[4/5] bg-panel">
+        <img src="https://images.pexels.com/photos/8005368/pexels-photo-8005368.jpeg?auto=compress&cs=tinysrgb&w=1200"
+             alt="Technician servicing a split air conditioner indoor unit"
+             class="w-full h-full object-cover"
+             loading="eager"
+             onerror="this.onerror=null;this.src='https://images.pexels.com/photos/4489749/pexels-photo-4489749.jpeg?auto=compress&cs=tinysrgb&w=1200';" />
       </div>
     </div>
   </div>
@@ -166,48 +203,48 @@
 
     <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
-      <div class="reveal group p-6 rounded-xl border border-black/[0.08] bg-white hover:border-copper/40 hover:shadow-md hover:shadow-black/[0.04] transition-all">
-        <div class="w-11 h-11 rounded-lg bg-panel flex items-center justify-center mb-4 group-hover:bg-copper/10 transition-colors">
+      <div class="reveal card-lift group p-6 rounded-xl border border-black/[0.08] bg-white hover:border-copper/40 hover:shadow-xl hover:shadow-black/[0.08]">
+        <div class="icon-pop w-11 h-11 rounded-lg bg-panel flex items-center justify-center mb-4 group-hover:bg-copper/10">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0v3a4 4 0 0 0 4 4H2a4 4 0 0 0 4-4V8Z"/><path d="M9 20a3 3 0 0 0 6 0"/></svg>
         </div>
         <h3 class="font-semibold text-lg">AC Repair &amp; Service</h3>
         <p class="mt-2 text-sm text-ink/65 leading-relaxed">Cooling issues, gas top-up, servicing and general split &amp; window AC repair at your home.</p>
       </div>
 
-      <div class="reveal group p-6 rounded-xl border border-black/[0.08] bg-white hover:border-copper/40 hover:shadow-md hover:shadow-black/[0.04] transition-all">
-        <div class="w-11 h-11 rounded-lg bg-panel flex items-center justify-center mb-4 group-hover:bg-copper/10 transition-colors">
+      <div class="reveal card-lift group p-6 rounded-xl border border-black/[0.08] bg-white hover:border-copper/40 hover:shadow-xl hover:shadow-black/[0.08]">
+        <div class="icon-pop w-11 h-11 rounded-lg bg-panel flex items-center justify-center mb-4 group-hover:bg-copper/10">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="5" y1="12" x2="19" y2="12"/><line x1="9" y1="6" x2="9" y2="6"/><line x1="9" y1="16" x2="9" y2="16"/></svg>
         </div>
         <h3 class="font-semibold text-lg">Refrigerator Repair</h3>
         <p class="mt-2 text-sm text-ink/65 leading-relaxed">Fridge not cooling, unusual noise or door and gasket problems — diagnosed and repaired on site.</p>
       </div>
 
-      <div class="reveal group p-6 rounded-xl border border-black/[0.08] bg-white hover:border-copper/40 hover:shadow-md hover:shadow-black/[0.04] transition-all">
-        <div class="w-11 h-11 rounded-lg bg-panel flex items-center justify-center mb-4 group-hover:bg-copper/10 transition-colors">
+      <div class="reveal card-lift group p-6 rounded-xl border border-black/[0.08] bg-white hover:border-copper/40 hover:shadow-xl hover:shadow-black/[0.08]">
+        <div class="icon-pop w-11 h-11 rounded-lg bg-panel flex items-center justify-center mb-4 group-hover:bg-copper/10">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v6"/><path d="M5 10h14l-1.5 10a2 2 0 0 1-2 1.8H8.5a2 2 0 0 1-2-1.8L5 10Z"/><path d="M9 3h6"/></svg>
         </div>
         <h3 class="font-semibold text-lg">Cooler Repair</h3>
         <p class="mt-2 text-sm text-ink/65 leading-relaxed">Motor, pump, and cooling pad issues fixed so your air cooler runs smoothly through summer.</p>
       </div>
 
-      <div class="reveal group p-6 rounded-xl border border-black/[0.08] bg-white hover:border-copper/40 hover:shadow-md hover:shadow-black/[0.04] transition-all">
-        <div class="w-11 h-11 rounded-lg bg-panel flex items-center justify-center mb-4 group-hover:bg-copper/10 transition-colors">
+      <div class="reveal card-lift group p-6 rounded-xl border border-black/[0.08] bg-white hover:border-copper/40 hover:shadow-xl hover:shadow-black/[0.08]">
+        <div class="icon-pop w-11 h-11 rounded-lg bg-panel flex items-center justify-center mb-4 group-hover:bg-copper/10">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
         </div>
         <h3 class="font-semibold text-lg">Washing Machine Repair</h3>
         <p class="mt-2 text-sm text-ink/65 leading-relaxed">Spin, drainage, motor and control issues repaired for both top-load and front-load machines.</p>
       </div>
 
-      <div class="reveal group p-6 rounded-xl border border-black/[0.08] bg-white hover:border-copper/40 hover:shadow-md hover:shadow-black/[0.04] transition-all">
-        <div class="w-11 h-11 rounded-lg bg-panel flex items-center justify-center mb-4 group-hover:bg-copper/10 transition-colors">
+      <div class="reveal card-lift group p-6 rounded-xl border border-black/[0.08] bg-white hover:border-copper/40 hover:shadow-xl hover:shadow-black/[0.08]">
+        <div class="icon-pop w-11 h-11 rounded-lg bg-panel flex items-center justify-center mb-4 group-hover:bg-copper/10">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a9 9 0 0 1 20 0"/><path d="M6 9a5 5 0 0 1 12 0"/><line x1="12" y1="9" x2="12" y2="20"/><path d="M9 20h6"/></svg>
         </div>
         <h3 class="font-semibold text-lg">Home Appliance Repair</h3>
         <p class="mt-2 text-sm text-ink/65 leading-relaxed">General electrical and electronic home appliance repair beyond the categories above — just ask.</p>
       </div>
 
-      <div class="reveal group p-6 rounded-xl border border-black/[0.08] bg-white hover:border-copper/40 hover:shadow-md hover:shadow-black/[0.04] transition-all">
-        <div class="w-11 h-11 rounded-lg bg-panel flex items-center justify-center mb-4 group-hover:bg-copper/10 transition-colors">
+      <div class="reveal card-lift group p-6 rounded-xl border border-black/[0.08] bg-white hover:border-copper/40 hover:shadow-xl hover:shadow-black/[0.08]">
+        <div class="icon-pop w-11 h-11 rounded-lg bg-panel flex items-center justify-center mb-4 group-hover:bg-copper/10">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M17 2 12 7 7 2"/></svg>
         </div>
         <h3 class="font-semibold text-lg">Dish TV Service</h3>
@@ -228,19 +265,21 @@
         Every repair starts with a proper look at the actual problem. Mahesh Shah works directly on your appliance at home, explains what's wrong, and gets it running again — no unnecessary parts, no confusing jargon.
       </p>
       <div class="mt-7 flex flex-wrap gap-3">
-        <a href="tel:+918182001836" class="inline-flex items-center gap-2 bg-ink text-white font-semibold px-5 py-3 rounded-lg hover:bg-black transition-colors focus-ring text-sm">
+        <a href="tel:+918182001836" class="btn-press inline-flex items-center gap-2 bg-ink text-white font-semibold px-5 py-3 rounded-lg hover:bg-black focus-ring text-sm">
           Call Now
         </a>
-        <a href="https://wa.me/918182001836?text=Hello%20Mahesh%20ji%2C%20I%20need%20help%20with%20appliance%20repair%2Fservice.%20Please%20let%20me%20know%20the%20details." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white border border-black/15 text-ink font-semibold px-5 py-3 rounded-lg hover:bg-panel transition-colors focus-ring text-sm">
+        <a href="https://wa.me/918182001836?text=Hello%20Mahesh%20ji%2C%20I%20need%20help%20with%20appliance%20repair%2Fservice.%20Please%20let%20me%20know%20the%20details." target="_blank" rel="noopener noreferrer" class="btn-press inline-flex items-center gap-2 bg-white border border-black/15 text-ink font-semibold px-5 py-3 rounded-lg hover:bg-panel focus-ring text-sm">
           WhatsApp
         </a>
       </div>
     </div>
     <div class="reveal order-1 md:order-2">
-      <div class="rounded-2xl overflow-hidden shadow-lg shadow-black/[0.08] aspect-[4/3]">
-        <img src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?q=80&w=1200&auto=format&fit=crop"
-             alt="Technician servicing a washing machine in a home"
-             class="w-full h-full object-cover" loading="lazy" />
+      <div class="img-zoom rounded-2xl shadow-lg shadow-black/[0.08] aspect-[4/3] bg-white">
+        <img src="https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?auto=compress&cs=tinysrgb&w=1200"
+             alt="Technician repairing a washing machine at home"
+             class="w-full h-full object-cover"
+             loading="lazy"
+             onerror="this.onerror=null;this.src='https://images.pexels.com/photos/5591581/pexels-photo-5591581.jpeg?auto=compress&cs=tinysrgb&w=1200';" />
       </div>
     </div>
   </div>
@@ -309,6 +348,17 @@
           </div>
         </div>
       </div>
+      <div class="reveal">
+        <div class="flex items-start gap-3">
+          <div class="w-9 h-9 rounded-lg bg-copper/10 flex items-center justify-center shrink-0 mt-0.5">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#B5642B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold">₹300 Fixed Visiting Charge</h3>
+            <p class="mt-1.5 text-sm text-ink/65 leading-relaxed">One clear visiting/service charge for the home visit, with no hidden costs.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -317,10 +367,12 @@
 <section id="about" class="py-16 md:py-24 bg-panel">
   <div class="max-w-6xl mx-auto px-5 sm:px-8 grid md:grid-cols-5 gap-10 items-center">
     <div class="md:col-span-2 reveal">
-      <div class="rounded-2xl overflow-hidden shadow-lg shadow-black/[0.08] aspect-square">
-        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1000&auto=format&fit=crop"
-             alt="Electronics repair technician working with tools"
-             class="w-full h-full object-cover" loading="lazy" />
+      <div class="img-zoom rounded-2xl shadow-lg shadow-black/[0.08] aspect-square bg-white">
+        <img src="https://images.pexels.com/photos/4489749/pexels-photo-4489749.jpeg?auto=compress&cs=tinysrgb&w=1000"
+             alt="Electronics and appliance repair technician working with tools"
+             class="w-full h-full object-cover"
+             loading="lazy"
+             onerror="this.onerror=null;this.src='https://images.pexels.com/photos/8005368/pexels-photo-8005368.jpeg?auto=compress&cs=tinysrgb&w=1000';" />
       </div>
     </div>
     <div class="md:col-span-3 reveal">
@@ -371,13 +423,16 @@
         Contact Mahesh Shah directly for repair and service assistance in Sahajanwa and nearby areas.
       </p>
       <p class="mt-6 text-2xl font-semibold tracking-wide">8182001836</p>
+      <p class="mt-3 inline-flex items-center gap-2 text-sm font-medium text-white/80 bg-white/10 rounded-full px-4 py-1.5">
+        ₹300 Fixed Visiting Charge · Home Service
+      </p>
 
       <div class="mt-8 flex flex-wrap justify-center gap-3">
-        <a href="tel:+918182001836" class="inline-flex items-center gap-2 bg-copper hover:bg-coppdark text-white font-semibold px-6 py-3.5 rounded-lg transition-colors focus-ring">
+        <a href="tel:+918182001836" class="btn-press inline-flex items-center gap-2 bg-copper hover:bg-coppdark text-white font-semibold px-6 py-3.5 rounded-lg focus-ring">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           Call Now
         </a>
-        <a href="https://wa.me/918182001836?text=Hello%20Mahesh%20ji%2C%20I%20need%20help%20with%20appliance%20repair%2Fservice.%20Please%20let%20me%20know%20the%20details." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-ink font-semibold px-6 py-3.5 rounded-lg hover:bg-white/90 transition-colors focus-ring">
+        <a href="https://wa.me/918182001836?text=Hello%20Mahesh%20ji%2C%20I%20need%20help%20with%20appliance%20repair%2Fservice.%20Please%20let%20me%20know%20the%20details." target="_blank" rel="noopener noreferrer" class="btn-press inline-flex items-center gap-2 bg-white text-ink font-semibold px-6 py-3.5 rounded-lg hover:bg-white/90 focus-ring">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
           WhatsApp Now
         </a>
@@ -409,11 +464,11 @@
 
 <!-- MOBILE FIXED ACTION BAR -->
 <div class="fixed bottom-0 inset-x-0 z-50 md:hidden bg-white/95 backdrop-blur border-t border-black/[0.08] px-4 py-3 flex gap-3">
-  <a href="tel:+918182001836" class="flex-1 inline-flex items-center justify-center gap-2 bg-ink text-white font-semibold py-3 rounded-lg text-sm focus-ring">
+  <a href="tel:+918182001836" class="btn-press flex-1 inline-flex items-center justify-center gap-2 bg-ink text-white font-semibold py-3 rounded-lg text-sm focus-ring">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
     Call
   </a>
-  <a href="https://wa.me/918182001836?text=Hello%20Mahesh%20ji%2C%20I%20need%20help%20with%20appliance%20repair%2Fservice.%20Please%20let%20me%20know%20the%20details." target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-2 bg-copper text-white font-semibold py-3 rounded-lg text-sm focus-ring">
+  <a href="https://wa.me/918182001836?text=Hello%20Mahesh%20ji%2C%20I%20need%20help%20with%20appliance%20repair%2Fservice.%20Please%20let%20me%20know%20the%20details." target="_blank" rel="noopener noreferrer" class="btn-press flex-1 inline-flex items-center justify-center gap-2 bg-copper text-white font-semibold py-3 rounded-lg text-sm focus-ring">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
     WhatsApp
   </a>
